@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour{
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
     public Animator animator;
-    public CharacterController2D controller;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
