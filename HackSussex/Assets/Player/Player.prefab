@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7857194692912557645}
   - component: {fileID: 2115511665433552671}
+  - component: {fileID: 2077404145388858302}
   m_Layer: 0
   m_Name: SwordCollision
   m_TagString: Untagged
@@ -39,7 +40,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921921686812032879}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -61,7 +62,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -77,6 +78,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2077404145388858302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921921686812032879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5222d1758d2a27c3aa79594ce956670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 10
 --- !u!1 &3648675486948879256
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +242,6 @@ GameObject:
   - component: {fileID: -3739746651058491110}
   - component: {fileID: 6509039952230604146}
   - component: {fileID: 541033712763730154}
-  - component: {fileID: 7241648519983742964}
   - component: {fileID: 8556323986479715241}
   m_Layer: 0
   m_Name: Player
@@ -410,27 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf8a6e5ae4995f478dbcd71e765c02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &7241648519983742964
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6537798004099037910}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  animation: {fileID: 4854419589148059864}
+  collision: {fileID: 2115511665433552671}
 --- !u!114 &8556323986479715241
 MonoBehaviour:
   m_ObjectHideFlags: 0
