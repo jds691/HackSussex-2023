@@ -20,7 +20,7 @@ implemented.
 
 To contribute to the source code you will need to following tools:
 
-- [Unity 2023.2.0](https://unity.com/releases/editor/archive)
+- [Unity 2022.3.13](unityhub://2022.3.13f1/5f90a5ebde0f) (Opens in [Unity Hub](https://unity.com/download))
 - [Git LFS](https://git-lfs.com/)
 - A Unity supported C# editor ([JetBrains Rider](https://www.jetbrains.com/rider/)
   or [Visual Studio](https://visualstudio.microsoft.com/))
