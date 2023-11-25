@@ -13,10 +13,13 @@ public class EnemyStatConfig : ScriptableObject
     private float _physicalDamage;
     [SerializeField]
     private float _movementSpeed;
+    [SerializeField]
+    private float _points;
 
     public float Health => _health;
     public float PhysicalDamage => _physicalDamage;
     public float MovementSpeed => _movementSpeed;
+    public float Points => _points;
 
     [Header("Weapons - LVL 2")]
     
