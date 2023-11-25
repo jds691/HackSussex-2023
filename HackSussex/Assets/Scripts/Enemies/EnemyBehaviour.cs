@@ -9,7 +9,7 @@ public abstract class EnemyBehaviour : MonoBehaviour
     private HealthController _healthController;
     
     [SerializeField]
-    private EnemyStatConfig _statsConfig;
+    protected EnemyStatConfig p_StatsConfig;
 
     private void Awake()
     {
