@@ -19,10 +19,12 @@ public abstract class EnemyBehaviour : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.name == "Player")
         {
-            //TODO: Tell the player controller to receive damage
-            //TODO: Knockback the player
+            if (other.gameObject.TryGetComponent(out HealthController healthController))
+            {
+                healthController.TakeDamage(healthController.Health);
+            }
         }
     }
     
