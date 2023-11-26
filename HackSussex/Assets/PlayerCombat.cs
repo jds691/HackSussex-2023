@@ -18,7 +18,7 @@ public class PlayerCombat : MonoBehaviour
         // Damage them
         animation.SetTrigger("Swing");
         collision.enabled = true;
-        cooldown = 0.016f;
+        cooldown = 0.16f;
 
     }
 
