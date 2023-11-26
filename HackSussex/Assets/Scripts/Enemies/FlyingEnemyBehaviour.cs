@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FlyingEnemyBehaviour : EnemyBehaviour
@@ -9,7 +11,6 @@ public class FlyingEnemyBehaviour : EnemyBehaviour
     [SerializeField]
     private bool _loopPath;
 
-    private int _direction = 1;
     private int _currentPathNode = 0;
 
     private Vector3 _lastPosition;
@@ -31,7 +32,7 @@ public class FlyingEnemyBehaviour : EnemyBehaviour
 
         if (Vector3.Distance(transform.position, target) < 0.001f)
         {
-            _currentPathNode += _direction;
+            _currentPathNode++;
             _lastPosition = target;
             transform.position = position;
             
@@ -43,24 +44,20 @@ public class FlyingEnemyBehaviour : EnemyBehaviour
                 }
                 else
                 {
-                    _direction = -1;
+                    ReverseFlightPath();
+                    _currentPathNode = 0;
                 }
-
-                _currentPathNode = _flightPath.Length - 1;
             }
-            else if (_currentPathNode <= 0)
-            {
-                if (!_loopPath)
-                {
-                    Destroy(gameObject);
-                }
-                else
-                {
-                    _direction = 1;
-                }
+        }
+    }
 
-                _currentPathNode = 0;
-            }
+    private void ReverseFlightPath()
+    {
+        Array.Reverse(_flightPath);
+
+        for (int i = 0; i < _flightPath.Length; i++)
+        {
+            _flightPath[i] *= -1;
         }
     }
 }
