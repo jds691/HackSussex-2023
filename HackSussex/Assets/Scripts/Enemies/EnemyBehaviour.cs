@@ -11,7 +11,7 @@ public abstract class EnemyBehaviour : MonoBehaviour
     [SerializeField]
     protected EnemyStatConfig p_StatsConfig;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         _healthController = GetComponent<HealthController>();
         _healthController.OnTakeDamage += HealthController_OnOnTakeDamage;

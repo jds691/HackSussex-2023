@@ -802,6 +802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green_Punk
       objectReference: {fileID: 0}
+    - target: {fileID: 7039319527865977674, guid: 9517d6d0a6ed711228c3ce9c7d8d316c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
