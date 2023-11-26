@@ -16,7 +16,7 @@ public class FlyingEnemyBehaviour : EnemyBehaviour
     private Vector3 _lastPosition;
 
     protected override void Awake()
-    {
+    { 
         base.Awake();
         
         _lastPosition = transform.position;
